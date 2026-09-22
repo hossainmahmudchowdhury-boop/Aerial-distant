@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Linear Displacement Measurer",
+  "version": "1.0.0",
+  "description": "Click two points on any webpage to measure the straight-line (linear) displacement between them, in pixels.",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Aerial distant"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}
